@@ -39,8 +39,8 @@ visibleScrollbar.oninput = () => {
   const scroller = customCarousel.querySelector(':scope > .grid-flow---scroller')
 
   function mutate() {
-    scroller.style.display = value === 'true' ? null : 'none'
-    scrollerOutput.textContent = value === 'true' ? '&::scrollbar { display: block }' : ''
+    scroller.classList.toggle('scrollbar-visible', value === 'true')
+    scrollbarOutput.textContent = value === 'true' ? 'scrollbar-width: thin;' : 'scrollbar-width: none;'
   }
 
   if (document.startViewTransition)
