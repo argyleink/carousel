@@ -94,6 +94,15 @@
     <header>
       <h1>Carousel Configurator</h1>
       <p>Discover features, battle test, and make it your own.</p>
+
+      <output><pre><code>.my-carousel {
+  <span id="scrollbarOutput">scrollbar-width: none;</span>
+
+  <span id="buttonsOutput">&::scroll-left-button  { content: '&lt;' }
+  &::scroll-right-button { content: '&gt;' }</span>
+  
+  <span id="markersOutput">&::scroll-markers { content: ' ' }</span>
+}</code></pre></output>
     </header>
 
     <carousel class="custom" id="customCarousel">

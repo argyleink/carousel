@@ -8,7 +8,6 @@
   padding-bottom: 8px;
 
   > .grid-flow---scroller {
-    overflow-y: hidden; /* todo remove */
     scrollbar-width: none;
 
     &.scrollbar-visible {
@@ -18,10 +17,13 @@
 
   .scroll-left-button, 
   .scroll-right-button {
-    background-color: var(--surface-1);
     border-color: var(--surface-2);
     border-style: solid;
     color: var(--text-1);
+
+    &:not(:disabled) {
+      background-color: var(--surface-1);
+    }
   }
 
   scroll-markers > input {
