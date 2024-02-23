@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark light">
-    <link rel="stylesheet" href="./style.css">
-    <script src="/main.js" type="module"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="/index.js" type="module"></script>
     <style>
       /* styles are inline so polyfill can get them */
       carousel {
@@ -25,7 +25,7 @@
         &::grid-flow(--scroller) {
           grid-area: scroller;
           overflow-x: auto;
-          scrollbar-width: none;
+          /* scrollbar-width: none; */
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
           overscroll-behavior-x: contain;
@@ -91,9 +91,12 @@
     </style>
   </head>
   <body>
-    <h1>Carousel Configurator</h1>
+    <header>
+      <h1>Carousel Configurator</h1>
+      <p>Discover features, battle test, and make it your own.</p>
+    </header>
 
-    <carousel class="custom">
+    <carousel class="custom" id="customCarousel">
       <li>
         <figure>
           <div class="box"></div>
@@ -143,5 +146,47 @@
         </figure>
       </li>
     </carousel>
+    
+    <section>
+      <form id="carouselConfiguration">
+
+        <fieldset id="navigationButtons">
+          <label>Next and Previous buttons?</label>
+          <label>
+            <input type="radio" name="buttons" value="true" checked />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="buttons" value="false" />
+            No
+          </label>
+        </fieldset>
+
+        <fieldset id="paginationButtons">
+          <label>Pagination dots?</label>
+          <label>
+            <input type="radio" name="pagination" value="true" checked />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="pagination" value="false" />
+            No
+          </label>
+        </fieldset>
+
+        <fieldset id="visibleScrollbar">
+          <label>Visible scrollbar?</label>
+          <label>
+            <input type="radio" name="scrollbar" value="true" />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="scrollbar" value="false" checked />
+            No
+          </label>
+        </fieldset>
+
+      </form>
+    </section>
   </body>
 </html>

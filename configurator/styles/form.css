@@ -1,0 +1,12 @@
+form {
+  display: grid;
+  justify-content: start;
+  gap: var(--size-5);
+
+  fieldset {
+    display: grid;
+    padding: 0;
+    border: none;
+    gap: var(--size-2);
+  }
+}

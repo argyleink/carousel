@@ -1,50 +1,20 @@
-@import 'open-props/sizes' layer(design.system);
-@import 'open-props/aspects' layer(design.system);
-@import 'open-props/oklch-hues' layer(design.system);
-@import 'open-props/gray-hd' layer(design.system);
-
-:root {
-  --gray-chroma: 0;
-
-  --surface-1: white;
-  --surface-2: var(--gray-0);
-  --surface-3: var(--gray-1);
-  --surface-document: var(--gray-2);
-  --well-1: var(--gray-3);
-  --text-1: var(--gray-16);
-  --text-2: var(--gray-12);
-
-  @media (prefers-color-scheme: dark) {
-    --gray-hue: var(--hue-indigo);
-    --gray-chroma: .01;
-    --surface-1: var(--gray-11);
-    --surface-2: var(--gray-12);
-    --surface-3: var(--gray-13);
-    --surface-document: var(--gray-13);
-    --well-1: var(--gray-14);
-    --text-1: var(--gray-1);
-    --text-2: var(--gray-5);
-  }
-}
-
-html {
-  background-color: var(--surface-document);
-  color: var(--text-1);
-}
-
-body {
-  display: grid;
-  place-content: center;
-}
-
 .custom {
   background: var(--well-1);
   width: min(calc(100vw - 16px), 800px);
   height: min(calc(100vh - 16x), 400px);
   border: 1px solid var(--surface-2);
-  overflow: hidden;
+  overflow-y: hidden;
   resize: both;
   padding-bottom: 8px;
+
+  > .grid-flow---scroller {
+    overflow-y: hidden; /* todo remove */
+    scrollbar-width: none;
+
+    &.scrollbar-visible {
+      scrollbar-width: thin;
+    }
+  }
 
   .scroll-left-button, 
   .scroll-right-button {
@@ -55,6 +25,7 @@ body {
   }
 
   scroll-markers > input {
+    --gray-chroma: .5;
     background-color: transparent;
     border-color: var(--surface-1);
 
@@ -97,9 +68,7 @@ body {
   }
 }
 
-
 .box {
-  inline-size: var(--size-content-2);
-  aspect-ratio: var(--ratio-portrait);
+  height: 100%;
   background: var(--surface-1);
 }

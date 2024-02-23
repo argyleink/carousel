@@ -1,0 +1,19 @@
+@import 'open-props/sizes' layer(design.system);
+@import 'open-props/aspects' layer(design.system);
+
+@import './theme.css' layer(design.base);
+@import './form.css' layer(design.base);
+
+@import './carousel.css' layer(components.carousel);
+
+html {
+  background-color: var(--surface-document);
+  color: var(--text-1);
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  gap: var(--size-5);
+}
