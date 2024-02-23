@@ -10,7 +10,7 @@ navigationButtons.oninput = () => {
     })
 
     buttonsOutput.textContent = value === 'false' ? `` : `&::scroll-left-button  { content: '<' }
-    &::scroll-right-button { content: '>' }`
+  &::scroll-right-button { content: '>' }`
   }
 
   if (document.startViewTransition)
