@@ -4,7 +4,8 @@
 @import './theme.css' layer(design.base);
 @import './form.css' layer(design.base);
 
-@import './carousel.css' layer(components.carousel);
+/* @import './carousel.css' layer(components.carousel); */
+@import './carousel.css';
 
 html {
   background-color: var(--surface-document);

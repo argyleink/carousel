@@ -7,6 +7,7 @@
     <meta name="color-scheme" content="dark light">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="/index.js" type="module"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
       /* styles are inline so polyfill can get them */
       carousel {
@@ -40,7 +41,8 @@
             height: 100%;
             grid-flow: --markers;
             display: flex;
-            justify-content: center;
+            place-content: center;
+            place-items: center;
           }
 
           &::scroll-left-button, &::scroll-right-button {
@@ -50,17 +52,23 @@
             align-self: center;
             position: absolute;
             z-index: 1;
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24;
             transition: background-color 300ms, border-color 300ms, color 300ms;
           }
           &::scroll-left-button {
             grid-area: previous;
-            content: '<';
+            content: 'arrow_back_ios';
             left: 0;
           }
 
           &::scroll-right-button {
             grid-area: next;
-            content: '>';
+            content: 'arrow_forward_ios';
             right: 0;
           }
 
