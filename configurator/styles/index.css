@@ -14,12 +14,13 @@ html {
 }
 
 body {
+  margin: 0;
   display: grid;
   place-content: center;
   gap: var(--size-5);
-  padding-block: var(--size-5) var(--size-10);
+  padding-block-end: var(--size-10);
 
-  @media (width >= 1150px) {
+  @media (width >= 1200px) {
     grid-template-columns: auto 1fr;
     column-gap: var(--size-10);
 
@@ -30,7 +31,11 @@ body {
     > form {
       grid-column: 1;
       grid-row: 1;
+      min-block-size: 100svh;
+      box-sizing: border-box;
+      align-content: start;
       padding: var(--size-5);
+      background: var(--surface-2);
     }
   }
 }
