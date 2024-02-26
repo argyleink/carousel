@@ -1,12 +1,31 @@
 form {
   display: grid;
   justify-content: start;
-  gap: var(--size-5);
+  gap: var(--size-10);
 
   fieldset {
     display: grid;
     padding: 0;
     border: none;
     gap: var(--size-2);
+
+    &[disabled] {
+      > :is(label,legend) {
+        color: var(--text-2);
+      }
+
+      input {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  > section {
+    display: grid;
+    gap: var(--size-5);
+
+    > h2 {
+      margin: 0;
+    }
   }
 }

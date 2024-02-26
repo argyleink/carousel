@@ -17,4 +17,26 @@ body {
   display: grid;
   place-content: center;
   gap: var(--size-5);
+  padding-block: var(--size-5) var(--size-10);
+
+  @media (width >= 1150px) {
+    grid-template-columns: auto 1fr;
+    column-gap: var(--size-10);
+
+    > *:not(form) {
+      grid-column: 2;
+    }
+
+    > form {
+      grid-column: 1;
+      grid-row: 1;
+      padding: var(--size-5);
+    }
+  }
+}
+
+output > pre {
+  max-inline-size: max-content;
+  background: var(--well-1);
+  padding: var(--size-3);
 }

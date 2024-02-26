@@ -99,97 +99,79 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>Carousel Configurator</h1>
-      <p>Discover features, battle test, and make it your own.</p>
-
-      <output><pre><code>.my-carousel {
+    <main>
+      <header>
+        <h1>Carousel Configurator</h1>
+        <p>Discover features, battle test, and make it your own.</p>
+      
+        <output>
+          <pre><code>.my-carousel {
   <span id="scrollbarOutput">scrollbar-width: none;</span>
 
   <span id="buttonsOutput">&::scroll-left-button  { content: '&lt;' }
   &::scroll-right-button { content: '&gt;' }</span>
   
   <span id="markersOutput">&::scroll-markers { content: ' ' }</span>
-}</code></pre></output>
-    </header>
-
-    <carousel class="custom" id="customCarousel">
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 1</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 2</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 3</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 4</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 5</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 6</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 7</figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="box"></div>
-          <figcaption>Item 8</figcaption>
-        </figure>
-      </li>
-    </carousel>
+}</code></pre>
+        </output>
+      </header>
+      
+      <carousel class="custom" id="customCarousel">
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 1</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 2</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 3</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 4</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 5</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 6</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 7</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="box"></div>
+            <figcaption>Item 8</figcaption>
+          </figure>
+        </li>
+      </carousel>
+    </main>
     
-    <section>
-      <form id="carouselConfiguration">
+    <form id="carouselConfiguration">
 
-        <fieldset id="navigationButtons">
-          <label>Next and Previous buttons?</label>
-          <label>
-            <input type="radio" name="buttons" value="true" checked />
-            Yes
-          </label>
-          <label>
-            <input type="radio" name="buttons" value="false" />
-            No
-          </label>
-        </fieldset>
-
-        <fieldset id="paginationButtons">
-          <label>Pagination dots?</label>
-          <label>
-            <input type="radio" name="pagination" value="true" checked />
-            Yes
-          </label>
-          <label>
-            <input type="radio" name="pagination" value="false" />
-            No
-          </label>
-        </fieldset>
+      <section>
+        <h2>Options</h2>
 
         <fieldset id="visibleScrollbar">
           <label>Visible scrollbar?</label>
@@ -203,20 +185,117 @@
           </label>
         </fieldset>
 
-        <!-- 
-          TODO:
-            - axis
-            - snapping (off, items, pages)
-            - button position (inset, overlay, outset, top bottom middle, flanking, together)
-            - starting item (scroll-start)
-            - cyclical nav buttons
-            - nav buttons snap by (item, page )
-            - cyclical pagination
-            - pagination snap by (item, page)
-            - console.log(snapchanged, snapchanging)
-        -->
+        <fieldset disabled id="axis">
+          <label>Direction?</label>
+          <label>
+            <input type="radio" name="axis" value="true" checked />
+            X
+          </label>
+          <label>
+            <input type="radio" name="axis" value="false" />
+            Y
+          </label>
+        </fieldset>
+        
+        <fieldset disabled>
+          <label>Snapping?</label>
+          <label>
+            <input type="radio" name="snapping" value="true" checked />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="snapping" value="false" />
+            No
+          </label>
+        </fieldset>
+        
+        <fieldset disabled>
+          <label>Start at item?</label>
+          <label>
+            <select name="starting-item" id="scrollStart">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </label>
+        </fieldset>
+      </section>
 
-      </form>
-    </section>
+      <section>
+        <h2>Scroll Buttons</h2>
+
+        <fieldset id="navigationButtons">
+          <label>Next and Previous buttons?</label>
+          <label>
+            <input type="radio" name="buttons" value="true" checked />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="buttons" value="false" />
+            No
+          </label>
+        </fieldset>
+
+        <fieldset disabled id="navigationCycle">
+          <label>Buttons cycle?</label>
+          <label>
+            <input type="radio" name="buttonsCycle" value="true" />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="buttonsCycle" value="false" checked />
+            No
+          </label>
+        </fieldset>
+      </section>
+
+      <section>
+        <h2>Scroll Markers</h2>
+
+        <fieldset id="paginationButtons">
+          <label>Pagination dots?</label>
+          <label>
+            <input type="radio" name="pagination" value="true" checked />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="pagination" value="false" />
+            No
+          </label>
+        </fieldset>
+
+        <fieldset disabled id="markerCycle">
+          <label>Pagination cycle?</label>
+          <label>
+            <input type="radio" name="paginationCycle" value="true" checked />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="paginationCycle" value="false" />
+            No
+          </label>
+        </fieldset>
+      </section>
+
+      <!-- 
+        TODO:
+          - axis
+          - snapping (off, items, pages)
+          - button position (inset, overlay, outset, top bottom middle, flanking, together)
+          - starting item (scroll-start)
+          - cyclical nav buttons
+          - nav buttons snap by (item, page )
+          - cyclical pagination
+          - pagination snap by (item, page)
+          - console.log(snapchanged, snapchanging)
+          - lots of dots (overflow markers)
+      -->
+
+    </form>
   </body>
 </html>
