@@ -23,6 +23,7 @@ body {
   @media (width >= 1200px) {
     grid-template-columns: auto 1fr;
     column-gap: var(--size-10);
+    padding-block-end: 0px;
 
     > *:not(form) {
       grid-column: 2;
@@ -31,7 +32,8 @@ body {
     > form {
       grid-column: 1;
       grid-row: 1;
-      min-block-size: 100svh;
+      block-size: 100svh;
+      overflow-y: auto;
       box-sizing: border-box;
       align-content: start;
       padding: var(--size-5);
