@@ -9,7 +9,7 @@
   --surface-3: var(--gray-1);
   --surface-document: var(--gray-2);
   --well-1: var(--gray-3);
-  --text-1: var(--gray-16);
+  --text-1: var(--gray-15);
   --text-2: var(--gray-12);
 
   @media (prefers-color-scheme: dark) {
