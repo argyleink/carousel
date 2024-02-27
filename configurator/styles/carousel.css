@@ -72,6 +72,15 @@
       }
     }
   }
+
+  &.--pagination-numbers {
+    counter-reset: carousel;
+
+    .scroll-marker::before {
+      counter-increment: carousel;
+      content: counter(carousel);
+    }
+  }
 }
 
 .box {
