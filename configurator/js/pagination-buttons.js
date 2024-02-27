@@ -4,6 +4,7 @@ paginationButtons.oninput = () => {
 
   function mutate() {
     markers.style.display = value === 'true' ? null : 'none'
+    markersOutput.style.display = value === 'true' ? null : 'none'
   }
 
   document.startViewTransition 
