@@ -26,7 +26,6 @@
         &::grid-flow(--scroller) {
           grid-area: scroller;
           overflow-x: auto;
-          /* scrollbar-width: none; */
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
           overscroll-behavior-x: contain;
@@ -120,49 +119,49 @@
       
       <carousel class="custom" id="customCarousel">
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 1</figcaption>
           </figure>
         </li>
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 2</figcaption>
           </figure>
         </li>
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 3</figcaption>
           </figure>
         </li>
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 4</figcaption>
           </figure>
         </li>
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 5</figcaption>
           </figure>
         </li>
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 6</figcaption>
           </figure>
         </li>
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 7</figcaption>
           </figure>
         </li>
         <li>
-          <figure>
+          <figure style="--src:url(http://via.placeholder.com/400x300)">
             <div class="box"></div>
             <figcaption>Item 8</figcaption>
           </figure>
@@ -290,7 +289,7 @@
             Dots
           </label>
           <label>
-            <input type="radio" name="paginationType" value="images" />
+            <input disabled type="radio" name="paginationType" value="images" />
             Images
           </label><label>
             <input type="radio" name="paginationType" value="numbers" />

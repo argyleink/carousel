@@ -29,3 +29,7 @@ form {
     }
   }
 }
+
+label:has([disabled]) {
+  cursor: not-allowed;
+}

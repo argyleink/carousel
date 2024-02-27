@@ -76,9 +76,30 @@
   &.--pagination-numbers {
     counter-reset: carousel;
 
-    .scroll-marker::before {
-      counter-increment: carousel;
-      content: counter(carousel);
+    .scroll-marker {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      place-items: center;
+      place-content: center;
+      &::before {
+        counter-increment: carousel;
+        content: counter(carousel);
+      }
+    }
+  }
+
+  &.--pagination-images {
+    figure {
+      background: var(--src);
+      background-size: cover;
+    }
+
+    .scroll-marker {
+      width: 2rem;
+      height: 3rem;
+      background: var(--src) content-box;
+      background-size: cover;
     }
   }
 }
