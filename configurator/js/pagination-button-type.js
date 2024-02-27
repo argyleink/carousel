@@ -9,14 +9,19 @@ paginationButtonType.oninput = () => {
         type = '"•"'
         break
       case 'numbers':
-        type = 'counter(section)'
+        type = 'counter(carousel)'
         break
       case 'images':
         type = 'attr(src)'
         break
     }
 
-    markersOutput.textContent = `&::scroll-markers { content: ${type} }`
+    markersOutput.textContent = value === 'numbers'
+      ? `&::scroll-markers {
+    content: ${type};
+    counter-increment: carousel;
+  }`
+      : `&::scroll-markers { content: ${type} }`
     markersCounter.style.display = value === 'numbers' ? null : 'none'
   }
 
