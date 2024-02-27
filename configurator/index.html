@@ -107,11 +107,12 @@
         <output>
           <pre><code>.my-carousel {
   <span id="scrollbarOutput">scrollbar-width: none;</span>
+  <span id="markersCounter" style="display:none">counter-reset: carousel;</span>
 
   <span id="buttonsOutput">&::scroll-left-button  { content: '&lt;' }
   &::scroll-right-button { content: '&gt;' }</span>
   
-  <span id="markersOutput">&::scroll-markers { content: ' ' }</span>
+  <span id="markersOutput">&::scroll-markers { content: '·' }</span>
 }</code></pre>
         </output>
       </header>
@@ -174,7 +175,7 @@
         <h2>Options</h2>
 
         <fieldset id="visibleScrollbar">
-          <label>Visible scrollbar?</label>
+          <label>Scrollbar?</label>
           <label>
             <input type="radio" name="scrollbar" value="true" />
             Yes
@@ -197,7 +198,7 @@
           </label>
         </fieldset>
         
-        <fieldset disabled>
+        <fieldset disabled id="snapping">
           <label>Snapping?</label>
           <label>
             <input type="radio" name="snapping" value="true" checked />
@@ -209,7 +210,7 @@
           </label>
         </fieldset>
         
-        <fieldset disabled>
+        <fieldset disabled id="scrollStart">
           <label>Start at item?</label>
           <label>
             <select name="starting-item" id="scrollStart">
@@ -230,7 +231,7 @@
         <h2>Scroll Buttons</h2>
 
         <fieldset id="navigationButtons">
-          <label>Next and Previous buttons?</label>
+          <label>Shown?</label>
           <label>
             <input type="radio" name="buttons" value="true" checked />
             Yes
@@ -242,7 +243,7 @@
         </fieldset>
 
         <fieldset disabled id="buttonSnapBy">
-          <label>Buttons navigate by?</label>
+          <label>Navigate by?</label>
           <label>
             <input type="radio" name="buttonSnapType" value="item" />
             Item
@@ -254,7 +255,7 @@
         </fieldset>
 
         <fieldset disabled id="navigationCycle">
-          <label>Buttons cycle?</label>
+          <label>Cycle?</label>
           <label>
             <input type="radio" name="buttonsCycle" value="true" />
             Yes
@@ -270,7 +271,7 @@
         <h2>Scroll Markers</h2>
 
         <fieldset id="paginationButtons">
-          <label>Pagination dots?</label>
+          <label>Shown?</label>
           <label>
             <input type="radio" name="pagination" value="true" checked />
             Yes
@@ -281,8 +282,23 @@
           </label>
         </fieldset>
 
+        <fieldset id="paginationButtonType">
+          <label>Type?</label>
+          <label>
+            <input type="radio" name="paginationType" value="dots" checked />
+            Dots
+          </label>
+          <label>
+            <input type="radio" name="paginationType" value="images" />
+            Images
+          </label><label>
+            <input type="radio" name="paginationType" value="numbers" />
+            Numbers
+          </label>
+        </fieldset>
+
         <fieldset disabled id="markerSnapBy">
-          <label>Markers navigate by?</label>
+          <label>Navigate by?</label>
           <label>
             <input type="radio" name="markerSnapType" value="item" />
             Item
@@ -294,7 +310,7 @@
         </fieldset>
 
         <fieldset disabled id="markerCycle">
-          <label>Pagination cycle?</label>
+          <label>Cycle?</label>
           <label>
             <input type="radio" name="paginationCycle" value="true" checked />
             Yes
