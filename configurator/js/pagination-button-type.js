@@ -17,11 +17,11 @@ paginationButtonType.oninput = () => {
     }
 
     markersOutput.textContent = value === 'numbers'
-      ? `&::scroll-marker {
+      ? `::scroll-marker {
     content: ${type};
     counter-increment: carousel;
   }`
-      : `&::scroll-markers { content: ${type} }`
+      : `::scroll-markers { content: ${type} }`
     markersCounter.style.display = value === 'numbers' ? null : 'none'
 
     customCarousel.classList.toggle('--pagination-numbers', value === 'numbers')

@@ -7,8 +7,8 @@ navigationButtons.oninput = () => {
       button.style.display = value === 'true' ? null : 'none'
     })
 
-    buttonsOutput.textContent = value === 'false' ? `` : `&::scroll-left-button  { content: '<' }
-  &::scroll-right-button { content: '>' }`
+    buttonsOutput.textContent = value === 'false' ? `` : `&::scroll-left-button  { content: '<' / 'Previous'; }
+  &::scroll-right-button { content: '>' / 'Next'; }`
   }
 
   document.startViewTransition 

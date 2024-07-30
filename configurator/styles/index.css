@@ -42,8 +42,20 @@ body {
   }
 }
 
+main {
+  display: grid;
+  gap: var(--size-10);
+  align-content: start;
+}
+
 output > pre {
   max-inline-size: max-content;
   background: var(--well-1);
   padding: var(--size-3);
+}
+
+.two-columns {
+  display: grid;
+  gap: var(--size-5);
+  grid-template-columns: max-content max-content;
 }

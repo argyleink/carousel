@@ -425,7 +425,7 @@ function addMarker(elem, usedProps) {
   handleScroll.apply(scroller);
 }
 
-function update() {
+export function update() {
   let generated = document.createElement('style');
   generated.setAttribute('polyfill-generated', 'true');
   let stylesheets = document.querySelectorAll('style:not([polyfill-generated])');

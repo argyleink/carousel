@@ -102,20 +102,34 @@
       <header>
         <h1>Carousel Configurator</h1>
         <p>Discover features, battle test, and make it your own.</p>
+      </header>
+
+    <div class="two-columns">
+      <section>
+        <h2>HTML:</h2>
+        <output>
+          <pre><code>&lt;section class="my-carousel"&gt;
+  &lt;li&gt;…&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+  …
+&lt;section&gt;</code></pre></output>
+      </section>
       
-        <output id="carouselSnippet">
+      <section>
+        <h2>CSS:</h2>
+      <output id="carouselSnippet">
           <pre><code>.my-carousel {
   <span id="scrollbarOutput">scrollbar-width: none;</span>
   <span id="markersCounter" style="display:none">counter-reset: carousel;</span>
 
-  <span id="buttonsOutput">&::scroll-left-button  { content: '&lt;' }
-  &::scroll-right-button { content: '&gt;' }</span>
-  
-  <span id="markersOutput">&::scroll-markers { content: '·' }</span>
-  <span id="markerOutput" style="display:none"></span>
-}</code></pre>
-        </output>
-      </header>
+  <span id="buttonsOutput">&::scroll-left-button  { content: '&lt;' / 'Previous'; }
+  &::scroll-right-button { content: '&gt;' / 'Next'; }</span>
+
+  <span id="markersNavigateBy">&::fragment</span><span id="markersOutput">::scroll-markers { content: '·' }</span>
+}</code></pre></output>
+      </section>
+      
+    </div>
       
       <carousel class="custom" id="customCarousel">
         <li>
@@ -186,7 +200,7 @@
           </label>
         </fieldset>
 
-        <fieldset disabled id="axis">
+        <!-- <fieldset disabled id="axis">
           <label>Direction?</label>
           <label>
             <input type="radio" name="axis" value="true" checked />
@@ -196,9 +210,9 @@
             <input type="radio" name="axis" value="false" />
             Y
           </label>
-        </fieldset>
+        </fieldset> -->
         
-        <fieldset disabled id="snapping">
+        <!-- <fieldset disabled id="snapping">
           <label>Snapping?</label>
           <label>
             <input type="radio" name="snapping" value="true" checked />
@@ -208,9 +222,9 @@
             <input type="radio" name="snapping" value="false" />
             No
           </label>
-        </fieldset>
+        </fieldset> -->
         
-        <fieldset disabled id="scrollStart">
+        <!-- <fieldset disabled id="scrollStart">
           <label>Start at item?</label>
           <label>
             <select name="starting-item" id="scrollStart">
@@ -224,7 +238,7 @@
               <option value="8">8</option>
             </select>
           </label>
-        </fieldset>
+        </fieldset> -->
       </section>
 
       <section>
@@ -242,7 +256,7 @@
           </label>
         </fieldset>
 
-        <fieldset disabled id="buttonSnapBy">
+        <!-- <fieldset disabled id="buttonSnapBy">
           <label>Navigate by?</label>
           <label>
             <input type="radio" name="buttonSnapType" value="item" />
@@ -252,9 +266,9 @@
             <input type="radio" name="buttonSnapType" value="page" checked />
             Page
           </label>
-        </fieldset>
+        </fieldset> -->
 
-        <fieldset disabled id="navigationCycle">
+        <!-- <fieldset disabled id="navigationCycle">
           <label>Cycle?</label>
           <label>
             <input type="radio" name="buttonsCycle" value="true" />
@@ -264,7 +278,7 @@
             <input type="radio" name="buttonsCycle" value="false" checked />
             No
           </label>
-        </fieldset>
+        </fieldset> -->
       </section>
 
       <section>
@@ -297,7 +311,7 @@
           </label>
         </fieldset>
 
-        <fieldset disabled id="markerSnapBy">
+        <fieldset id="markerSnapBy">
           <label>Navigate by?</label>
           <label>
             <input type="radio" name="markerSnapType" value="item" />
@@ -309,7 +323,7 @@
           </label>
         </fieldset>
 
-        <fieldset disabled id="markerCycle">
+        <!-- <fieldset disabled id="markerCycle">
           <label>Cycle?</label>
           <label>
             <input type="radio" name="paginationCycle" value="true" checked />
@@ -319,7 +333,7 @@
             <input type="radio" name="paginationCycle" value="false" />
             No
           </label>
-        </fieldset>
+        </fieldset> -->
       </section>
 
       <!-- 
