@@ -7,6 +7,19 @@
 /* @import './carousel.css' layer(components.carousel); */
 @import './carousel.css';
 
+@font-face {
+  font-family: 'Monaspace';
+  src: 
+    url('/fonts/MonaspaceKrypton-SyntaxHighlighter-Regular.woff2') 
+    format('woff2')
+  ;
+}
+
+code {
+  font-family: "Monaspace", monospace;
+  font-feature-settings: "colr", "calt";
+}
+
 html {
   background-color: var(--surface-document);
   color: var(--text-1);
